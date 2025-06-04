@@ -27,12 +27,6 @@ az account management-group list --query [].name --output table
 # list management groups with query and filter
 az account management-group list --query "[?displayName=='Your Management Group Display Name'].name" --output table
 
-# list management groups with query and filter
-az account management-group list --query "[?displayName=='Your Management Group Display Name'].name" --output table
-
-# list management groups with query and filter
-az account management-group list --query "[?displayName=='Your Management Group Display Name'].name" --output table
-
 
 # see what memberships you have
 az rest --method GET \
@@ -53,8 +47,17 @@ az account management-group list --output table
 # get your object id
 az ad signed-in-user show --query id --output tsv
 
-az role assignment create \
-  --assignee <tenant-id> \
-  --role "Management Group Contributor" \
-  --scope /providers/Microsoft.Management/managementGroups/<tenant-id>
+# get your user id
+export USER_ID=$(az ad signed-in-user show --query id --output tsv)
 
+# get your tenant id
+export TENANT_ID=$(az account show --query tenantId --output tsv)
+
+# assign management group contributor role to your user
+az role assignment create \
+  --assignee $USER_ID \
+  --role "Management Group Contributor" \
+  --scope /providers/Microsoft.Management/managementGroups/$TENANT_ID
+
+# get your management group id
+export MG_ID=$(az account management-group list --query "[?displayName=='Tenant Root Group'].id" --output tsv)
