@@ -1,0 +1,30 @@
+{
+    "location": "eastus",
+    "properties": {
+      "dataSources": {
+        "syslog": [
+          {
+            "name": "collect-syslog",
+            "streams": [ "Microsoft-Syslog" ],
+            "facilityNames": [ "auth", "authpriv", "daemon" ],
+            "logLevels": [ "Info", "Warning", "Error" ]
+          }
+        ]
+      },
+      "destinations": {
+        "logAnalytics": [
+          {
+            "workspaceResourceId": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.OperationalInsights/workspaces/<WORKSPACE_NAME>",
+            "name": "myLogAnalyticsDest"
+          }
+        ]
+      },
+      "dataFlows": [
+        {
+          "streams": [ "Microsoft-Syslog" ],
+          "destinations": [ "myLogAnalyticsDest" ]
+        }
+      ]
+    }
+  }
+  

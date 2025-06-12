@@ -12,6 +12,11 @@ az security pricing create \
     --name VirtualMachines \
     --tier Standard \
     --subscription $SUB_ID
+    
+# enable defender for storage
+az security pricing create \
+  --name "StorageAccounts" \
+  --tier "Standard"
 
 # enable defender for cloud on servers (CWP) free tier (turned off in Azure Portal)
 az security pricing create \

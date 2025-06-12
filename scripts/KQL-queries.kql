@@ -1,0 +1,15 @@
+// List recent alerts
+SecurityAlert
+| where TimeGenerated > ago(1d)
+| summarize count() by AlertName, Severity, CompromisedEntity, TimeGenerated
+
+// confirming threat intelligence
+SecurityAlert
+| where TimeGenerated > ago(1d)
+| where AlertName has "Threat"
+
+// check for EICAR files created
+SecurityAlert
+| where TimeGenerated > ago(2h)
+| where AlertName has "EICAR"
+| sort by TimeGenerated desc
