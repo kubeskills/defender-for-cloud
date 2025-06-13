@@ -20,7 +20,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Bicep - Create a VM without JIT](scripts/vm.bicep)
 
-- [Bicep - Create AKS cluster with Defender Sensor](aks.bicep)
+- [Bicep - Create AKS cluster with Azure Policy Addon](aks.bicep)
 
 - [Bicep - Enable Defender for Containers](defender-for-containers.bicep)
 
