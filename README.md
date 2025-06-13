@@ -56,16 +56,25 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [KQL Queries for Log Analytics Workspace](scripts/KQL-queries.kql)
 
-## LINKS AND COMMANDS BY LESSON
+## SLIDES, LINKS, AND COMMANDS BY LESSON
 
-### LESSON: Enabling Defender for Cloud
+### LESSON 00: What is Defender for Cloud
+
+- [Slides: What is Defender for Cloud](slides/00-SLIDES-AZURE-SECURITY-WHAT-IS-DEFENDER.pdf)
+
+### LESSON 01: Enabling Defender for Cloud
+
+- [Slides: Enabling Defender for Cloud](slides/01-SLIDES-AZURE-SECURIT_ENABLING_DEFENDER.pdf)
+
 - [Link: Defender for Cloud Pricing Page](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)
 
 - [Commands: Register Providers](scripts/register-provider.sh)
 
 - [Commands: Create Role Assigments](scripts/role-assignment.sh)
 
-### LESSON: Security Policies and Compliance
+### LESSON 02: Security Policies and Compliance
+
+- [Slides: Security Policies and Compliance](slides/02-SLIDES-AZURE-SECURITY_COMPLIANCE-AND-SECURITY.pdf)
 
 - [Commands: Deploy VM and Storage Account](scripts/deploy-vm-and-sa.sh)
 
@@ -73,7 +82,17 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Bicep: Accompanying Storage Account Bicep Template](scripts/stroage.bicep)
 
-## LESSON: Compute Security
+### LESSON 03: Microsoft Entra ID Best Practices
+
+- [Slides: Microsoft Entra ID Best Practices](slides/03-SLIDES-AZURE-SECURITY_ENTRE-ID-BEST-PRACTICES.pdf)
+
+### LESSON 04: Role-Based Access Control (RBAC)
+
+- [Slides: Role-Based Access Control (RBAC)](slides/04-SLIDES-AZURE-SECURITY_RBAC.pdf)
+
+### LESSON 05: Compute Security
+
+- [Slides: Compute Security](slides/05-SLIDES-AZURE-SECURITY_COMPUTE_SECURITY.pdf)
 
 - [Link: Defender for Cloud Plan Comparison](https://learn.microsoft.com/en-us/defender-vulnerability-management/defender-vulnerability-management-capabilities)
 
@@ -81,8 +100,9 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Commands: Enable Defender for Cloud](scripts/enable-defender-for-cloud.sh)
 
+### LESSON 06: Container Security
 
-## LESSON: Container Security
+- [Slides: Container Security](slides/06-SLIDES-AZURE-SECURITY_CONTAINER_SECURITY.pdf)
 
 - [Link: Enable Defender Sensor for Containers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable)
 
@@ -91,7 +111,9 @@ This course can be located at [cybr.com](https://cybr.com)
 - [Link: Agentless Container Scanning Capabilities](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-containers)
 
 
-## LESSON: Storage Security
+### LESSON 07: Storage Security
+
+- [Slides: Storage Security](slides/07-SLIDES-AZURE-SECURITY_STORAGE_SECURITY.pdf)
 
 - [Commands: Create Log Analytics Workspace and Link Blob Storage](scripts/defender-for-storage.sh)
 
@@ -99,19 +121,25 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Commands: Perform Safe Hacks to Trigger Defender Alerts](scripts/safe-security-tests.sh)
 
-## LESSON: Network Security
+### LESSON 08: Network Security
+
+- [Slides: Network Security](slides/08-SLIDES-AZURE-SECURITY_NETWORK_SECURITY.pdf)
 
 - [Link: VNET Flow Logs](https://learn.microsoft.com/en-us/azure/network-watcher/vnet-flow-logs-overview)
 
 - [Commands: Enable Network Watcher and Enable VNET FLow Logs](scripts/enable-network-watcher.sh)
 
-## LESSON: Azure Firewall & DDoS Protection
+### LESSON 09: Azure Firewall & DDoS Protection
+
+- [Slides: Azure Firewall & DDoS Protection](slides/09-SLIDES-AZURE-SECURITY_AZURE-FIREWALL-DDOS.pdf)
 
 - [Commands: Create Azure Firewall and Enable Diagnostics](scripts/enable-firewall-diagnostics.sh)
 
 - [Commands: Enable DDoS Protection Plan](scripts/enable-DDoS-protection.sh)
 
-## LESSON: Zero Trust Networking
+### LESSON 10: Zero Trust Networking
+
+- [Slides: Zero Trust Networking](slides/10-SLIDES-AZURE-SECURITY_ZERO-TRUST.pdf)
 
 - [Link: Connect to a Storage Account Using an Azure Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-storage-portal?tabs=dynamic-ip)
 
@@ -119,13 +147,21 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Commands: Enforce Private Endpoint for Storage Account](scripts/create-private-endpoint.sh)
 
-## LESSON: Detecting and Responding to Threats
+### LESSON 11: Detecting and Responding to Threats
+
+- [Slides: Detecting and Responding to Threats](slides/11-SLIDES-AZURE-SECURITY_DETECTING-AND-RESPONDING.pdf)
 
 - [Commands: Perform Safe Hacks to Trigger Defender Alerts](scripts/safe-security-tests.sh)
 
 - [Commands: Create an Alert Simulation Workbook](scripts/alert-simulation-workbook.sh)
 
-## LESSON: Automating Incident Response
+### LESSON 12: Automating Incident Response
+
+- [Slides: Automating Incident Response](slides/12-SLIDES-AZURE-SECURITY_AUTOMATING-INCIDENT-RESPONSE.pdf)
 
 - [Commands: Create LogicApp and Workflow Automation](scripts/deploy-logic-app.sh)
+
+### LESSON 13: Wrap Up & Next Steps
+
+- [Slides: Wrap Up & Next Steps](slides/13-SLIDES-AZURE-SECURITY_NEXT-STEPS.pdf)
 
