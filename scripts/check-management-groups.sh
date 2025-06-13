@@ -35,6 +35,7 @@ az rest --method GET \
 
 # Elevate access to global admin
 # source: https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin
+# gives "User Access Administrator" Role in the tenant
 az rest --method post --url "/providers/Microsoft.Authorization/elevateAccess?api-version=2016-07-01"
 
 

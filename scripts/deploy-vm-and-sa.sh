@@ -36,7 +36,7 @@ az vm run-command invoke \
   --resource-group $RESOURCE_GROUP_NAME \
   --scripts "ping -c 4 8.8.8.8"
 
-# download a known EICAR test file (simulates malware)
+# manually create the EICAR test file
 az vm run-command invoke \
   --command-id RunShellScript \
   --name $VM_NAME \
@@ -61,3 +61,15 @@ sudo echo "test" > /etc/cron.d/testjob
 
 # trigger many repeated outbound connections
 for i in {1..50}; do curl http://example.com; done
+
+az vm run-command invoke \
+  --command-id RunShellScript \
+  --name $VM_NAME \
+  --resource-group $RESOURCE_GROUP_NAME \
+  --scripts "mdatp health"
+  
+az vm run-command invoke \
+  --command-id RunShellScript \
+  --name $VM_NAME \
+  --resource-group $RESOURCE_GROUP_NAME \
+  --scripts "sudo cat /etc/opt/microsoft/mdatp/managed/mdatp_managed.json"
