@@ -1,6 +1,10 @@
 # resource group
 export RESOURCE_GROUP_NAME=secure-rg
 
+##################################################################
+# BUYER BEWARE, ENABLING THIS SERVICE WILL COST $2,944 PER MONTH #
+##################################################################
+
 # Create the DDoS Protection Plan
 az network ddos-protection create \
   --resource-group $RESOURCE_GROUP_NAME \
