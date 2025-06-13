@@ -99,7 +99,6 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Commands: Perform Safe Hacks to Trigger Defender Alerts](scripts/safe-security-tests.sh)
 
-
 ## LESSON: Network Security
 
 - [Link: VNET Flow Logs](https://learn.microsoft.com/en-us/azure/network-watcher/vnet-flow-logs-overview)
@@ -112,11 +111,21 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Commands: Enable DDoS Protection Plan](scripts/enable-DDoS-protection.sh)
 
-## LESSON
+## LESSON: Zero Trust Networking
 
 - [Link: Connect to a Storage Account Using an Azure Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-storage-portal?tabs=dynamic-ip)
 
 - [Commands: Create JIT Policy for VM](scripts/create-JIT-policy.sh)
 
 - [Commands: Enforce Private Endpoint for Storage Account](scripts/create-private-endpoint.sh)
+
+## LESSON: Detecting and Responding to Threats
+
+- [Commands: Perform Safe Hacks to Trigger Defender Alerts](scripts/safe-security-tests.sh)
+
+- [Commands: Create an Alert Simulation Workbook](scripts/alert-simulation-workbook.sh)
+
+## LESSON: Automating Incident Response
+
+- [Commands: Create LogicApp and Workflow Automation](scripts/deploy-logic-app.sh)
 

@@ -70,24 +70,6 @@ az security setting list
 
 
 
-# get subscription
-export SUB_ID=$(az account show --query id --output tsv)
 
-# Grant Contributor access at the Resource Group level
-az role assignment create --assignee chadcrowell@kubeskills.onmicrosoft.com \
-    --role "Contributor" \
-    --scope "/subscriptions/$SUB_ID"
-
-az role assignment create --assignee chadcrowell@kubeskills.onmicrosoft.com \
-    --role "Network Contributor" \
-    --scope "/subscriptions/$SUB_ID"
-
-az role assignment create --assignee chadcrowell@kubeskills.onmicrosoft.com \
-    --role "Virtual Machine Contributor" \
-    --scope "/subscriptions/$SUB_ID"
-    
-az role assignment create --assignee chadcrowell@kubeskills.onmicrosoft.com \
-    --role "Security Admin" \
-    --scope "/subscriptions/$SUB_ID"
     
 
