@@ -13,3 +13,78 @@ SecurityAlert
 | where TimeGenerated > ago(2h)
 | where AlertName has "EICAR"
 | sort by TimeGenerated desc
+
+// Security Alerts by MITRE ATT&CK Tactic
+SecurityAlert
+| where TimeGenerated > ago(1d)
+| extend Tactic = tostring(parse_json(ExtendedProperties)["Tactic"])
+| summarize count() by Tactic, AlertName
+
+// High-Severity Alerts with Recommendations
+SecurityAlert
+| where TimeGenerated > ago(2d)
+| where Severity == "High"
+| project TimeGenerated, AlertName, CompromisedEntity, ExtendedProperties
+
+// Alerts by Affected Resource Type
+SecurityAlert
+| where TimeGenerated > ago(7d)
+| summarize count() by ResourceType
+
+// Alerts Likely to Trigger Logic Apps
+SecurityAlert
+| where TimeGenerated > ago(1d)
+| where AlertName has "SQL" or AlertName has "Malware"
+| summarize count() by AlertName, Severity, CompromisedEntity
+
+// Lateral Movement & Privilege Escalation Detection
+SecurityAlert
+| where TimeGenerated > ago(3d)
+| where AlertName has "Lateral Movement" or AlertName has "Privilege Escalation"
+| summarize count() by AlertName, CompromisedEntity, TimeGenerated
+
+// Secure Score Trends Over Time (via Log Analytics)
+SecurityScore
+| where TimeGenerated > ago(30d)
+| summarize avg(CurrentScore) by bin(TimeGenerated, 1d)
+
+// Unhealthy Resources with Active Recommendations
+SecurityRecommendation
+| where Status == "Unhealthy"
+| summarize count() by RecommendationName, ResourceType
+
+// File Integrity Monitoring (FIM) Alerts
+SecurityAlert
+| where TimeGenerated > ago(7d)
+| where AlertName has "File Integrity" or AlertName has "FIM"
+| project TimeGenerated, AlertName, CompromisedEntity, ExtendedProperties, Severity
+
+// Agentless Scanning Detections (e.g., Secrets, Malware, Vulnerabilities)
+SecurityRecommendation
+| where TimeGenerated > ago(7d)
+| where RecommendationName has "agentless" or RecommendationName has "secret" or RecommendationName has "malware"
+| project TimeGenerated, RecommendationName, ResourceId, Status, Severity
+
+// also Agentless Scanning Detections (e.g., Secrets, Malware, Vulnerabilities)
+SecurityAlert
+| where TimeGenerated > ago(7d)
+| where AlertName has "Agentless" or AlertName has "Malware" or AlertName has "Secrets"
+| project AlertName, TimeGenerated, CompromisedEntity, Severity
+
+// Azure Arc–Enabled Machines Monitoring
+resources
+| where type == "microsoft.hybridcompute/machines"
+| project name, location, resourceGroup, properties.status
+
+// also Azure Arc–Enabled Machines Monitoring
+SecurityRecommendation
+| where ResourceType == "microsoft.hybridcompute/machines"
+| summarize count() by RecommendationName, Status
+
+// Combine Arc + Agentless + FIM Detection
+SecurityAlert
+| where TimeGenerated > ago(7d)
+| where ResourceType == "microsoft.hybridcompute/machines"
+| where AlertName has_any ("File Integrity", "Secrets", "Malware")
+| project TimeGenerated, AlertName, CompromisedEntity, Severity
+
