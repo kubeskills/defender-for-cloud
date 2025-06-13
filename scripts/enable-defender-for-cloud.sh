@@ -24,6 +24,38 @@ az security pricing create \
     --tier Free \
     --subscription $SUB_ID
 
+# enable defender for App Service
+az security pricing create \
+  --name AppServices \
+  --tier Standard
+
+# enable defender for SQL Databases
+az security pricing create \
+  --name SqlServers \
+  --tier Standard
+
+# enable defender for DNS
+az security pricing create \
+  --name Dns \
+  --tier Standard
+
+# enable defender for Key Vault
+az security pricing create \
+  --name KeyVaults \
+  --tier Standard
+
+# enable defender for Containers (includes AKS and ACR protection)
+az security pricing create \
+  --name ContainerRegistry \
+  --tier Standard
+
+# enable defender for Resource Manager
+az security pricing create \
+  --name Arm \
+  --tier Standard
+
+
+
 # Verify the pricing update
 az security pricing show --name VirtualMachines
 

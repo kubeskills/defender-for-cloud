@@ -26,7 +26,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 ## SCRIPTS
 
-- [Enable Defender for Cloud - Plan 2](scripts/enable-defender-for-cloud.sh)
+- [Enable Defender for Cloud](scripts/enable-defender-for-cloud.sh)
 
 - [Create VM and Storage Account from Bicep files above](scripts/deploy-vm-and-sa.sh)
 
