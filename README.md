@@ -20,7 +20,9 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Bicep - Create a VM without JIT](scripts/vm.bicep)
 
-- [Bicep - Defender for Containers](defender-for-containers.bicep)
+- [Bicep - Create AKS cluster with Defender Sensor](aks.bicep)
+
+- [Bicep - Enable Defender for Containers](defender-for-containers.bicep)
 
 - [Bicep - LogicApp & Automation](logicapp-defender-automation.bicep)
 
