@@ -9,8 +9,8 @@ az network firewall create \
 
 # get firewall ID
 FIREWALL_ID=$(az network firewall show \
-  --name myFirewall \
-  --resource-group myResourceGroup \
+  --name firewallForDefender \
+  --resource-group $RESOURCE_GROUP_NAME \
   --query id --output tsv)
 
 # get the log analytics workspace name
@@ -27,3 +27,11 @@ export WORKSPACE_RESOURCE_ID=$(az monitor log-analytics workspace show \
   --query id \
   -o tsv)
   
+az monitor diagnostic-settings create \
+  --name "FirewallDiagnostics" \
+  --resource $FIREWALL_ID \
+  --workspace $WORKSPACE_RESOURCE_ID \
+  --logs '[{"category": "AzureFirewallApplicationRule", "enabled": true}, {"category": "AzureFirewallNetworkRule", "enabled": true}, {"category": "AzureFirewallDnsProxy", "enabled": true}]' \
+  --metrics '[{"category": "AllMetrics", "enabled": true}]'
+
+
