@@ -40,7 +40,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Enable Defender for Storage](scripts/defender-for-storage.sh)
 
-- [VM Commands to Test Alerts - Hacking](scripts/safe-security-tests.sh)
+- [VM Commands to Trigger Defender Alerts - Hacking](scripts/safe-security-tests.sh)
 
 - [Deploy an AKS Cluster with Defender Sensor](scripts/deploy-aks.sh)
 
