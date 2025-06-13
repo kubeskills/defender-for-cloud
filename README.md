@@ -42,7 +42,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Deploy an AKS Cluster with Defender Sensor](scripts/deploy-aks.sh)
 
-- [Deploy a Logic App in Defender for Cloud](scripts/deploy-logic-app.sh)
+- [Deploy a Logic App in Defender for Cloud with Automation Rule](scripts/deploy-logic-app.sh)
 
 - [Enable DDoS Protection Plan - $$$](scripts/enable-DDoS-protection.sh)
 
