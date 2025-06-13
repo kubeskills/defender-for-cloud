@@ -69,7 +69,6 @@ az security setting list
 
 
 
-########## THE BELOW IS OPTIONAL ################
 
 # get subscription
 export SUB_ID=$(az account show --query id --output tsv)
@@ -91,23 +90,4 @@ az role assignment create --assignee chadcrowell@kubeskills.onmicrosoft.com \
     --role "Security Admin" \
     --scope "/subscriptions/$SUB_ID"
     
-# check your permissions
-az role assignment list --assignee chadcrowell@kubeskills.onmicrosoft.com --query "[].roleDefinitionName"
 
-# register network provider
-az provider register --namespace Microsoft.Network
-
-# verify that it is registered
-az provider show --namespace Microsoft.Network --query "registrationState"
-
-# register compute provider
-az provider register --namespace Microsoft.Compute
-
-# verify that compute provider is registered
-az provider show --namespace Microsoft.Compute --query "registrationState"
-
-# register storage provider
-az provider register --namespace Microsoft.Storage
-
-# verify that storage provider is registered
-az provider show --namespace Microsoft.Storage --query "registrationState"

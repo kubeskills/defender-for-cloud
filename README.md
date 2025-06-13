@@ -12,7 +12,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Defender for Kubernetes - Deprecated Dec 2021](https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes-archive#microsoft-defender-for-containers-plan-released-for-general-availability-ga)
 
-
+- [NSG Flow Logs - Deprecated June 2025](https://learn.microsoft.com/en-us/azure/network-watcher/nsg-flow-logs-migrate)
 
 ## BICEP TEMPLATES
 
@@ -34,7 +34,7 @@ This course can be located at [cybr.com](https://cybr.com)
 
 - [Check Management Group Permissions](scripts/check-management-groups.sh)
 
-- [Check Role Assignments in Azure](scripts/check-role-assignment.sh)
+- [Check Role Assignments in Azure](scripts/role-assignment.sh)
 
 - [Enable Condional Access in Azure Entra ID](scripts/conditional-access-for-MFA.sh)
 
@@ -55,4 +55,68 @@ This course can be located at [cybr.com](https://cybr.com)
 - [Install Azure Monitor Agent](scripts/install-azure-monitor-agent.sh)
 
 - [KQL Queries for Log Analytics Workspace](scripts/KQL-queries.kql)
+
+## LINKS AND COMMANDS BY LESSON
+
+### LESSON: Enabling Defender for Cloud
+- [Link: Defender for Cloud Pricing Page](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)
+
+- [Commands: Register Providers](scripts/register-provider.sh)
+
+- [Commands: Create Role Assigments](scripts/role-assignment.sh)
+
+### LESSON: Security Policies and Compliance
+
+- [Commands: Deploy VM and Storage Account](scripts/deploy-vm-and-sa.sh)
+
+- [Bicep: Accompanying VM Bicep Template](scripts/vm.bicep)
+
+- [Bicep: Accompanying Storage Account Bicep Template](scripts/stroage.bicep)
+
+## LESSON: Compute Security
+
+- [Link: Defender for Cloud Plan Comparison](https://learn.microsoft.com/en-us/defender-vulnerability-management/defender-vulnerability-management-capabilities)
+
+- [Link: Deprecation of Log Analytics Agent (MMA)](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341)
+
+- [Commands: Enable Defender for Cloud](scripts/enable-defender-for-cloud.sh)
+
+
+## LESSON: Container Security
+
+- [Link: Enable Defender Sensor for Containers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable)
+
+- [Link: Support for EKS and GCP Clusters](https://learn.microsoft.com/en-us/azure/defender-for-cloud/agentless-vulnerability-assessment-azure)
+
+- [Link: Agentless Container Scanning Capabilities](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-containers)
+
+
+## LESSON: Storage Security
+
+- [Commands: Create Log Analytics Workspace and Link Blob Storage](scripts/defender-for-storage.sh)
+
+- [Commands: Upload files to Storage Account](scripts/defender-for-storage.sh)
+
+- [Commands: Perform Safe Hacks to Trigger Defender Alerts](scripts/safe-security-tests.sh)
+
+
+## LESSON: Network Security
+
+- [Link: VNET Flow Logs](https://learn.microsoft.com/en-us/azure/network-watcher/vnet-flow-logs-overview)
+
+- [Commands: Enable Network Watcher and Enable VNET FLow Logs](scripts/enable-network-watcher.sh)
+
+## LESSON: Azure Firewall & DDoS Protection
+
+- [Commands: Create Azure Firewall and Enable Diagnostics](scripts/enable-firewall-diagnostics.sh)
+
+- [Commands: Enable DDoS Protection Plan](scripts/enable-DDoS-protection.sh)
+
+## LESSON
+
+- [Link: Connect to a Storage Account Using an Azure Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-storage-portal?tabs=dynamic-ip)
+
+- [Commands: Create JIT Policy for VM](scripts/create-JIT-policy.sh)
+
+- [Commands: Enforce Private Endpoint for Storage Account](scripts/create-private-endpoint.sh)
 
